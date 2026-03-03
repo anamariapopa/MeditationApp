@@ -18,7 +18,7 @@ A personalized wellness and mindfulness platform built with **Java** and **Sprin
 
 The project follows a **Layered Architecture** to ensure high maintainability and scalability:
 
-* **Models:** JPA Entities representing the database schema.
+* **Models:** JPA Entities mapped to database tables, using **Lombok** `@Data` to ensure clean and readable code.
 * **Repositories:** Data Access Object (DAO) layer using `JpaRepository` for automated SQL queries.
 * **Services:** The Business Logic layer where all validations and core rules are processed.
 
@@ -31,6 +31,7 @@ The project follows a **Layered Architecture** to ensure high maintainability an
 * **Framework:** Spring Boot 3.x
 * **Database:** H2 (Development)
 * **ORM:** Hibernate / Spring Data JPA
+* **Utilities:** **Lombok** (Boilerplate reduction)
 * **Tooling:** Maven
 
 ---
