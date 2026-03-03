@@ -2,9 +2,11 @@ package com.meditate.MeditationApp.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
+import lombok.Data;
 
 @Entity
 @Table(name = "meditation_sessions")
+@Data
 public class MeditationSession {
 
     @Id
@@ -27,47 +29,5 @@ public class MeditationSession {
         this.user = user;
         this.durationMinutes = durationMinutes;
         this.isTemplate = isTemplate;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public int getDurationMinutes() {
-        return durationMinutes;
-    }
-
-    public void setDurationMinutes(int durationMinutes) {
-        this.durationMinutes = durationMinutes;
-    }
-
-    public boolean isTemplate() {
-        return isTemplate;
-    }
-
-    public void setTemplate(boolean template) {
-        isTemplate = template;
-    }
-
-    @Override
-    public String toString() {
-        return "MeditationSession{" +
-                "id=" + id +
-                ", user=" + user +
-                ", durationMinutes=" + durationMinutes +
-                ", isTemplate=" + isTemplate +
-                '}';
     }
 }

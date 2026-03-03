@@ -2,6 +2,7 @@ package com.meditate.MeditationApp.controller;
 
 import com.meditate.MeditationApp.model.MeditationSession;
 import com.meditate.MeditationApp.service.MeditationSessionService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,12 +10,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/sessions")
+@RequiredArgsConstructor
 public class MeditationSessionController {
     private final MeditationSessionService sessionService;
-
-    public MeditationSessionController(MeditationSessionService sessionService) {
-        this.sessionService = sessionService;
-    }
 
     @GetMapping("/templates")
     public ResponseEntity<List<MeditationSession>> getTemplates() {
