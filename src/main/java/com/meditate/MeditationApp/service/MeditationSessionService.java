@@ -19,7 +19,7 @@ public class MeditationSessionService {
         this.userRepository = userRepository;
     }
 
-    List<MeditationSession> findSessionByUserId(Long userId) {
+    public List<MeditationSession> findSessionByUserId(Long userId) {
         List<MeditationSession> sessions = sessionRepository.findSessionByUserId(userId);
 
         if (sessions.isEmpty()) {
@@ -60,7 +60,7 @@ public class MeditationSessionService {
      * @param sessionId The ID of the session to be deleted.
      * @throws RuntimeException if the session is a template or not found.
      */
-    void deleteSession(Long sessionId) {
+    public void deleteSession(Long sessionId) {
         MeditationSession session = sessionRepository.findById(sessionId)
                 .orElseThrow(() -> new RuntimeException("Session not found with id: " + sessionId));
 
