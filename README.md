@@ -31,7 +31,7 @@ The project follows a **Layered Architecture** to ensure high maintainability an
 * **Framework:** Spring Boot 3.x
 * **Database:** H2 (Development)
 * **ORM:** Hibernate / Spring Data JPA
-* **Utilities:** **Lombok** (Boilerplate reduction)
+* **Utilities:** Lombok (Boilerplate reduction)
 * **Tooling:** Maven
 
 ---
