@@ -34,6 +34,10 @@ public class UserService {
         else return userRepository.save(user);
     }
 
+    /**
+     * Deletes a user by their ID.
+     * @param userId
+     */
     public void deleteUser(Long userId) {
         if (userRepository.existsById(userId)) {
             userRepository.deleteById(userId);
