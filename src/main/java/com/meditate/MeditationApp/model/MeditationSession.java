@@ -1,5 +1,6 @@
 package com.meditate.MeditationApp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import lombok.Data;
@@ -15,6 +16,7 @@ public class MeditationSession {
 
     @ManyToOne(fetch = FetchType.LAZY)                      //fetch user data only when needed
     @JoinColumn(name = "user_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})          //ignores Hibernate lazy loading
     private User user;
 
     @Column(nullable = false)
